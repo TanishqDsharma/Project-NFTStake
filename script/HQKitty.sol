@@ -14,4 +14,13 @@ uint256 public _tokenIdCounter=1;
     constructor()ERC721("HQKitty","HQK"){
 
     }
+
+    /**functions */
+
+    //The safeMint function takes an address parameter, representing the address that will receive the NFT.
+    //Since the safeMint function is designed as the minting function to be called by external users, we set its visibility to public.
+
+    function safeMint(address to) public {
+        _safeMint(to, _tokenIdCounter);
+    }   
 }
