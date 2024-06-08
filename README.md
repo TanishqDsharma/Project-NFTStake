@@ -1,66 +1,38 @@
-## Foundry
+# NFT Staking
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+NFT staking is a mechanism that allows NFT holders to lock there NFT tokens in a smart contract for rewards or other benefits.
 
-Foundry consists of:
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+## Why Stake NFT?
 
-## Documentation
+-> User stake NFTs for the staking rewards. By staking their NFTs, holders can earn token rewards or other forms of rewards without selling their digital assets. These rewards are often related to participation in network governance, in-game rewards, or revenue distribution from staking pools.
 
-https://book.getfoundry.sh/
+### Staking Implementation:
 
-## Usage
+1. During the process of NFT staking, NFT assets are transferred to the staking contract.
+2. As a result, NFT holders temporarily lose the ability to trade or transfer their NFTs. However, in exchange, they receive staking rewards, which increases the incentive for holding NFTs.
 
-### Build
 
-```shell
-$ forge build
-```
+### Diving Deep into Staking Contract Implementation:
 
-### Test
+#### NOTE: 
+The staking contract is the core component of Staking Contract, as it defines rules and logic for NFT staking, unstaking and reward distribution. This contract also ensures security and automation of all staking activities.
 
-```shell
-$ forge test
-```
+##### Token Rewards:
+Token rewards are the main incentive for NFT staking, distributed to stakers as a reward. These rewards are typically calculated based on the duration of staking, the value of the NFT, and the total staked amount in the staking pool.
 
-### Format
+Q. How rewards are distributed?
+   -> Rewards are distributed with the help of a smart contract to ensure transparency and fairness.
 
-```shell
-$ forge fmt
-```
 
-### Gas Snapshots
+### Staking System Design
 
-```shell
-$ forge snapshot
-```
+Staking Process:
+* The staking process involves transferring NFTs from the holder's wallet to the staking contract. This process needs to ensure the security of transactions while allowing stakers to regain control of their NFTs under specific conditions.
 
-### Anvil
+Unstaking Process:
+* Unstaking refers to the process of stakers reclaiming their NFTs from the staking contract. Unstaking may require meeting certain conditions such as staking duration, reward claiming conditions, etc., to ensure fairness and transparency throughout the process.
 
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+Staking Reward Calculation:
+* Staking rewards are typically calculated based on multiple factors, including the quantity of NFTs staked, staking duration, and overall performance of the staking pool. 
+    * The reward calculation formula needs to be clearly defined in the staking contract in advance to ensure the interests of all participants.
